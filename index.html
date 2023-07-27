@@ -1,0 +1,58 @@
+<!-- Define o tipo do documento como HTML5 -->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Define a codificação de caracteres como UTF-8 para suportar caracteres especiais -->
+    <meta charset="UTF-8" />
+    <!-- Define a escala inicial da viewport para tornar a página responsiva em dispositivos móveis -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Define o título da página -->
+    <title>Projeto Pokedex - Curso Js Developer</title>
+    <!-- Define o ícone da guia do navegador usando um arquivo de imagem -->
+    <link
+      rel="shortcut icon"
+      href="./assets/img/Pokedex.png"
+      type="image/x-icon"
+    />
+    <!-- Inclui o arquivo CSS 'normalize.min.css' de uma biblioteca chamada 'normalize' para normalizar o estilo entre navegadores -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css"
+      integrity="sha512-NhSC1YmyruXifcj/KFRWoC561YpHpc5Jtzgvbuzx5VozKpWvQ+4nXhPdFgmx8xqexRcpAglTj9sIBWINXa8x5w=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <!-- Inclui a fonte 'Roboto' do Google Fonts para ser usada no projeto -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;500;700&display=swap"
+      rel="stylesheet"
+    />
+    <!-- Inclui o arquivo de estilo global do projeto -->
+    <link rel="stylesheet" href="/assets/css/global.css" />
+    <!-- Inclui o arquivo de estilo específico para a Pokedex -->
+    <link rel="stylesheet" href="/assets/css/pokedex.css" />
+  </head>
+
+  <body>
+    <!-- Define uma seção com a classe 'content', que conterá o conteúdo principal da página -->
+    <section class="content">
+      <!-- Define um título principal para a Pokedex -->
+      <h1>Pokedex</h1>
+      <!-- Define uma lista ordenada com a classe 'pokemons' e o ID 'pokemonList', onde os Pokemons serão exibidos -->
+      <ol id="pokemonList" class="pokemons">
+        <!-- Os Pokemons serão adicionados dinamicamente aqui através de JavaScript -->
+      </ol>
+      <!-- Define uma div com a classe 'pagination' para conter o botão 'Load More' -->
+      <div class="pagination">
+        <!-- Define um botão com o ID 'loadMoreButton' que será usado para carregar mais Pokemons -->
+        <button id="loadMoreButton" type="button">Load More</button>
+      </div>
+    </section>
+    <!-- Inclui os arquivos JavaScript necessários para o funcionamento da Pokedex -->
+    <script src="/assets/js/pokemon-model.js"></script>
+    <script src="/assets/js/poke-api.js"></script>
+    <script src="/assets/js/main.js"></script>
+  </body>
+</html>

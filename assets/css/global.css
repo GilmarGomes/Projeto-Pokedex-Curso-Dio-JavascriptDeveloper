@@ -1,0 +1,89 @@
+/* Define que todos os elementos (*) do documento terão a fonte 'Roboto', uma fonte sans-serif (sem serifa), 
+   ou seja, uma fonte sem traços adicionais nas extremidades das letras. Também define que a caixa (box) de 
+   todos os elementos considerará o conteúdo da caixa, incluindo o padding e a borda, mas não a margem. */
+* {
+  font-family: "Roboto", sans-serif;
+  box-sizing: border-box;
+}
+
+/* Define o estilo do corpo (body) do documento, que é a área principal do conteúdo visível no navegador. 
+     Aqui, o fundo (background-color) do corpo será uma cor de fundo cinza claro (#f6f8fc). */
+body {
+  background-color: #f6f8fc;
+}
+
+/* Define um estilo para o título (h1) dentro da classe 'content'. 
+     Aqui, o título terá o texto centralizado (text-align: center), o tamanho da fonte de 4 rem (font-size: 4rem), 
+     um sombreamento de texto (text-shadow) de 3 pixels horizontal e 6 pixels vertical, com uma cor de sombra 
+     semi-transparente (rgba(0, 0, 0, 0.583)). Além disso, haverá um deslocamento negativo de 10 pixels na margem superior 
+     (margin-top: -10px) para ajustar a posição do título. */
+h1 {
+  text-align: center;
+  font-size: 4rem;
+  text-shadow: 3px 6px 6px rgba(0, 0, 0, 0.583);
+  margin-top: -10px;
+}
+
+/* Define um estilo para a classe 'content'. As classes permitem aplicar estilos a elementos específicos 
+     no documento HTML. Neste caso, elementos com a classe 'content' terão as seguintes propriedades: 
+     largura (width) de 100vw, ou seja, 100% da largura da janela do navegador; altura (height) de 100vh, 
+     ou seja, 100% da altura da janela do navegador; padding (espaçamento interno) de 1rem; e 
+     background-color (cor de fundo) branco (#fff). Além disso, terão um sombreamento na caixa (box-shadow) 
+     de 3 pixels horizontal e 3 pixels vertical, com uma cor de sombra semi-transparente (rgba(0, 0, 0, 0.588)). */
+.content {
+  width: 100vw;
+  height: 100vh;
+  padding: 1rem;
+  background-color: #fff;
+  box-shadow: 3px 3px 6px rgba(0, 0, 0, 0.588);
+}
+
+/* Define um estilo para os elementos <li> (itens de lista) dentro da classe 'content ol'. 
+     Neste caso, os elementos <li> terão um sombreamento na caixa (box-shadow) de 3 pixels horizontal e 3 pixels vertical, 
+     com uma cor de sombra semi-transparente (rgba(0, 0, 0, 0.588)). */
+.content ol li {
+  box-shadow: 3px 3px 6px rgba(0, 0, 0, 0.588);
+}
+
+/* Define um estilo para a imagem dentro dos elementos <li> (itens de lista) da classe 'content ol' 
+     quando o mouse estiver sobre ela (hover). 
+     Neste caso, a imagem terá um efeito de aumento de escala (transform: scale(2)) quando o mouse estiver sobre ela. 
+     A transição de 0.3 segundos (transition: 0.3s) tornará o efeito suave. Também o z-index é definido como 100 para garantir 
+     que a imagem esteja acima de outros elementos na página durante o efeito de aumento de escala. */
+@media screen and (min-width: 992px) {
+  .content ol li img:hover {
+    transform: scale(2);
+    transition: 0.3s;
+    z-index: 100;
+  }
+}
+/* Define um estilo para os elementos <li> (itens de lista) da classe 'content ol' 
+     quando o mouse estiver sobre eles (hover). 
+     Neste caso, os elementos <li> terão um efeito de aumento de escala (transform: scale(2)) quando o mouse estiver sobre eles. 
+     A transição de 0.3 segundos (transition: 0.3s) tornará o efeito suave. Também o z-index é definido como 100 para garantir 
+     que os elementos estejam acima de outros elementos na página durante o efeito de aumento de escala. 
+     Os elementos também terão display flex e justify-content center para centralizá-los horizontalmente na página 
+     quando o efeito de aumento de escala for aplicado. */
+@media screen and (min-width: 992px) {
+  .content ol li:hover {
+    transform: scale(2);
+    transition: 0.3s;
+    z-index: 100;
+    display: flex;
+    justify-content: center;
+  }
+}
+/* Define um conjunto de estilos que só será aplicado a elementos com a classe 'content' quando a largura 
+     da tela (viewport) for igual ou maior que 992 pixels (min-width: 992px). 
+     Neste caso, os elementos com a classe 'content' terão a largura máxima (max-width) de 992 pixels, 
+     a altura (height) será ajustada automaticamente (height: auto), a margem será de 1rem em todas as direções 
+     (margin: 1rem auto) para centralizar o elemento horizontalmente na página, e terão um canto arredondado 
+     (border-radius) de 1rem, criando um visual mais arredondado nas bordas. */
+@media screen and (min-width: 992px) {
+  .content {
+    max-width: 992px;
+    height: auto;
+    margin: 1rem auto;
+    border-radius: 1rem;
+  }
+}
